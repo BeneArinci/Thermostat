@@ -37,7 +37,13 @@ describe('Thermostat', function () {
     it('has power saving mode on by default', function(){
       expect(thermostat.isPowerSavingModeOn()).toBe(true);
     });
+    it('can switch PSM off', function() {
+      thermostat.powerSavingModeOff();
+      expect(thermostat.isPowerSavingModeOn()).toBe(false);
+    });
   });
+
+
 
 
 
