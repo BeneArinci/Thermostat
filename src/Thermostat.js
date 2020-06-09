@@ -1,8 +1,11 @@
+'use strict';
 class Thermostat {
   constructor() {
     this.temperature = 20;
     this.MIN_TEMPERATURE = 10;
     this.powerSavingMode = true;
+    this.MAX_LIMIT_PSM_ON = 25;
+    this.MAX_LIMIT_PSM_OFF = 32;
   }
 
   getCurrentTemperature() {
@@ -10,7 +13,10 @@ class Thermostat {
   }
 
   up() {
-    this.temperature += 1
+    if (this.isMaximumTemperature()) {
+      return;
+    }
+    this.temperature += 1;
   }
 
   down() {
@@ -35,6 +41,13 @@ class Thermostat {
 
   switchPowerSavingModeOn() {
     this.powerSavingMode = true;
+  }
+
+  isMaximumTemperature() {
+    if (this.isPowerSavingModeOn() === false) {
+      return this.temperature === this.MAX_LIMIT_PSM_OFF;
+    }
+    return this.temperature === this.MAX_LIMIT_PSM_ON;
   }
 
 }
