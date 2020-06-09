@@ -30,7 +30,11 @@ class Thermostat {
   }
 
   powerSavingModeOff() {
-    this.powerSavingMode = false
+    this.powerSavingMode = false;
+  }
+
+  switchPowerSavingModeOn() {
+    this.powerSavingMode = true;
   }
 
 }
