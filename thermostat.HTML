@@ -2,24 +2,82 @@
 
 body {
     text-align: center;
-    background-color: beige;
     font-family: Arial;
+    background-image: url("./img/wall.jpg"), url("paper.gif");
 }
 .intList {
     list-style-type: none;
+    text-align: center;
 }
 .interface {
-    background-color: burlywood;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
 }
+
+.temperature {
+  font-size: 55px;
+  font-weight: bold;
+  color: deeppink;
+}
 .energyusage{
-    height: 25px;
-  width: 25px;
+  margin-top: 2em;
+  margin-left: 4em;
+  height: 30px;
+  width: 30px;
   background-color: #bbb;
   border-radius: 50%;
+}
+
+.up{
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  border-radius: 12px;
+  padding: 10px;
   display: inline-block;
+  height: 100px;
+  width: 60px;
+  border-color: blue;
+  border-color: darkred;
+  background:#FF6347;
+
+}
+.down{
+  font-weight: bold;
+  font-size: 12px;
+  color: white;
+  border-radius: 12px;
+  padding: 10px;
+  height: 100px;
+  width: 60px;
+  background:dodgerblue;
+  margin-left: 1em;
+
+}
+
+.reset{
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+  background: darkgrey;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  border-radius: 5px;
+  padding: 10px;
+  width: 130px;
+}
+
+.switchpowermode{
+  font-size: 10px;
+  color: white;
+  background: black;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  border-radius: 10px;
+  padding: 10px;
+  width: 120px;
+  height: 30px;
 }
 
 
@@ -33,10 +91,10 @@ body {
 </head>
 <body>
 <h1 class='title'> Thermostat </h1>
-<h1> Temperature is: <span class='current_temperature'> </span> </h1>
+<h1> Outside temperature is: <span class='current_temperature'> </span> </h1>
 <div class=interface>
-<p class='temperature'></p> 
 <ul class='intList'>
+  <p class='temperature'></p>
 <li>
 <button class='up'> Up </button>
 <button class='down'> Down </button>
@@ -47,7 +105,7 @@ body {
 <button class='switchpowermode'> Switch Power Mode </button>
 </li>
 <li>
-<span class='energyusage'> </span>
+<div class='energyusage'> </div>
 </li>
 </ul>
 </div>
