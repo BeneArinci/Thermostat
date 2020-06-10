@@ -1,24 +1,24 @@
 $(document).ready( function() {
     thermostat = new Thermostat();
     energyUsageColor()
-    $('.temperature').text(thermostat.getCurrentTemperature());
+    $('.temperature').text(thermostat.getCurrentTemperature()+ 'C');
 
     $('.up').click(function() {
         thermostat.up();
         energyUsageColor()
-        $('.temperature').text(thermostat.getCurrentTemperature());
+        $('.temperature').text(thermostat.getCurrentTemperature()+ 'C');
     })
 
     $('.down').click(function() {
         thermostat.down();
         energyUsageColor()
-        $('.temperature').text(thermostat.getCurrentTemperature());
+        $('.temperature').text(thermostat.getCurrentTemperature()+ 'C');
     })
 
     $('.reset').click(function () {
         thermostat.resetTemperature();
         energyUsageColor()
-        $('.temperature').text(thermostat.getCurrentTemperature());
+        $('.temperature').text(thermostat.getCurrentTemperature() + 'C');
     })
 
     $('.powermode').text(powermodeStatus());

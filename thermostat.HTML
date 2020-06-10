@@ -1,18 +1,56 @@
+<style>
+
+body {
+    text-align: center;
+    background-color: beige;
+    font-family: Arial;
+}
+.intList {
+    list-style-type: none;
+}
+.interface {
+    background-color: burlywood;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+.energyusage{
+    height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+</style>
+
 
 <head>
 <script type="text/javascript" src="src/Thermostat.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="jquery.js"></script>
 </head>
-
+<body>
 <h1 class='title'> Thermostat </h1>
 <h1> Temperature is: <span class='current_temperature'> </span> </h1>
-<textarea class='temperature'> </textarea>
+<div class=interface>
+<p class='temperature'></p> 
+<ul class='intList'>
+<li>
 <button class='up'> Up </button>
 <button class='down'> Down </button>
+</li>
 <button class='reset'> Reset </button>
-<textarea class='powermode'> </textarea>
+<li>
+<span class='powermode'> </span>
 <button class='switchpowermode'> Switch Power Mode </button>
-<textarea class='energyusage' height='5px' width='5px'> </textarea>
+</li>
+<li>
+<span class='energyusage'> </span>
+</li>
+</ul>
+</div>
 <input class='location' type='text' name='location'>
 <button class='submit_location'> Set location </button>
+</body>
